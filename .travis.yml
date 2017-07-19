@@ -12,8 +12,10 @@ script:
   - npm run lint
   - docker build -t timmyers/shtunnel-cloud .
 
-after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push timmyers/shtunnel;
-    fi
+deploy:
+  provider: script
+  on:
+    branch: master
+  script:
+    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    - docker push timmyers/shtunnel
