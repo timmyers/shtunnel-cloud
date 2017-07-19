@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/timmyers/shtunnel-cloud/issues"
   },
-  "homepage": "https://github.com/timmyers/shtunnel-cloud#readme"
+  "homepage": "https://github.com/timmyers/shtunnel-cloud#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
