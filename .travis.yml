@@ -13,9 +13,10 @@ script:
   - docker build -t timmyers/shtunnel-cloud .
 
 deploy:
-  provider: script
   on:
     branch: master
+  provider: script
+  skip_cleanup: true
   script:
     - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     - docker push timmyers/shtunnel
