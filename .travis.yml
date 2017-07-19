@@ -1,13 +1,19 @@
+# sudo: required
+
 language: node_js
+
+# services:
+  # - docker
 
 node_js:
   - "8"
 
 script:
   - npm run lint
+  - docker build -t timmyers/shtunnel-cloud .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push USER/REPO;
+    docker push timmyers/shtunnel;
     fi
