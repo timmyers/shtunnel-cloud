@@ -1,2 +1,2 @@
-docker pull tmyers/shtunnel-cloud
+docker pull timmyers/shtunnel-cloud
 docker service update shtunnel-cloud
