@@ -1,1 +1,2 @@
-docker service create --replicas 1 --name helloworld timmyers/shtunnel-cloud
+docker pull tmyers/shtunnel-cloud
+docker service update shtunnel-cloud
