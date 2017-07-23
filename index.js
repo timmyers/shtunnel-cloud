@@ -31,9 +31,6 @@ server.listen(PORT, () => {
 setInterval(() => {
   console.log('Interval!');
 
-  fetch('https://github.com/')
-    .then(res => res.text())
-    .then(body => console.log(body));
   fetch('other.local')
     .then(res => res.text())
     .then(body => console.log(body));
