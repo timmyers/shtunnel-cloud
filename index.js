@@ -9,7 +9,6 @@ const wsConnections = [];
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('One more time.');
   res.send(`${wsConnections.length} ws connections`);
 });
 
